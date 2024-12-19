@@ -1,5 +1,5 @@
 [package]
-name = "bevy-card-demo"
+name = "bevy-mui"
 version = "0.1.0"
 edition = "2021"
 
@@ -9,6 +9,13 @@ opt-level = 1
 [profile.dev.package."*"]
 opt-level = 3
 
+[workspace]
+members = ["crates/*"]
+
+[[example]]
+name = "hello_world_ui"
+path = "examples/hello_world_ui.rs"
+
 [dependencies]
-avian3d = { git = "https://github.com/Jondolf/avian", branch = "main" }
 bevy = "0.15.0"
+bevy-mui-core = { path = "crates/bevy-mui-core" }
